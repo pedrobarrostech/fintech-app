@@ -1,0 +1,31 @@
+@import '../../styles/colors.scss';
+
+.header {
+  background: $black;
+  display: flex;
+  justify-content: center;
+  padding: 1.5em 0;
+
+  &__items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 85%;
+    flex-wrap: wrap;
+    
+    &__--first, &__--last {
+      width: 25%;
+    }
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .header {
+    &__items {
+      display: flex;
+      flex-wrap: unset;
+      width: 60%;
+    }
+  }
+}

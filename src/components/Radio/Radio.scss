@@ -1,0 +1,42 @@
+@import '../../styles/colors.scss';
+
+.radio {
+  &__label {
+    border: 3px solid $black;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 0.4em 0.7em;
+    text-align: center;
+    margin-right: 1em;
+
+    &.error {
+      color: $red;
+      border-color: $red;
+    }
+  }
+
+  &__label.active {
+    border-color: $blue;
+    color: $blue;
+  }
+
+  &__input {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .radio {
+    display: flex;
+
+    &__label {
+      font-size: 24px;
+      padding: 0.5em 2em;
+      margin-right: 0;
+    }
+  }
+  
+}

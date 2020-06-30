@@ -1,0 +1,65 @@
+@import '../../styles/colors.scss';
+
+.select { 
+  display: flex;
+  flex-direction: column-reverse;
+  
+  &__label {
+    display: flex;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+
+    &.error {
+      color: $red;
+    }
+  }
+  
+  &__component {
+    border: 3px solid $black;
+    font-size: 26px;
+    font-weight: 900;
+    outline: none;
+    height: auto;
+    display: flex;
+    background: transparent;
+    padding: 0.4em 0.1em;
+    text-transform: uppercase;
+    width: 97%;
+    font-family: 'Muli', sans-serif;
+
+    &:focus {
+      border-color: $blue;
+      box-shadow: 0 0 3px $blue;
+      outline: none;
+    }
+    
+    &.error {
+      border-color: $red;
+    }
+  
+    & option:first-child {
+      opacity: 0.25;
+    }
+
+    & option:first-of-type {
+      opacity: 0.25;
+    }
+
+    & option:disabled {
+      opacity: 0.25;
+    }
+
+    &:invalid, & option[value=""] {
+      color: #999999 !important;
+    }
+  }
+
+  &__component:focus + &__label {
+    color: $blue;
+  }
+}
+
+[hidden] {
+  display: none;
+}

@@ -1,0 +1,62 @@
+@import '../../styles/colors.scss';
+
+.input {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column-reverse;
+  
+  &__component {
+    border: 3px solid $black;
+    font-size: 26px;
+    font-weight: 900;
+    padding: 0.4em 0.1em;
+    background: transparent;
+    width: 95%;
+    font-family: 'Muli', sans-serif;
+
+    &:focus {
+      border-color: $blue !important;
+      box-shadow: 0 0 3px $blue;
+      outline-offset: 0;
+      outline: none;
+    }
+
+    &:visited, &:active, &:focus {
+      background-color: transparent;
+    }
+
+    &.error {
+      border-color: $red;
+    }
+
+    &::placeholder {
+      opacity: 0.25;
+    }
+  }
+
+  &__label {
+    font-weight: 900;
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1em;
+
+    &.error {
+      color: $red;
+    }
+  }
+
+  &__component:focus + &__label {
+    color: $blue;
+  } 
+}
+
+@media (min-width: 1024px) {
+  .input {
+    margin: 0 0.1em;
+
+    &__component {
+      width: 97%;
+    }
+  }
+}

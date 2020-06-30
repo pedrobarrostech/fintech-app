@@ -1,0 +1,37 @@
+
+@import '../../../styles/colors.scss';
+
+.header {
+  &__item {
+    font-size: 30px;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 50%;
+    margin-bottom: 1em;
+
+    &:nth-child(3), &:nth-child(4){
+      margin-bottom: 0;
+    }
+
+    &__value {
+      color: $white;
+    }
+
+    &__prefix, &__suffix {
+      color: $blue;
+      font-size: 13px;
+      display: block;
+      margin: 0.5em 0;
+      font-weight: 900;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    &__item {
+      margin-bottom: 0;
+    }
+  }
+}

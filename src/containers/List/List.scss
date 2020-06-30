@@ -1,0 +1,52 @@
+@import '../../styles/colors.scss';
+
+.user-list {
+  &__container {
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__table {
+    width: 100%;
+
+    thead th {
+      margin: 0;
+      padding: 0.5em;
+      border-bottom: 1px solid $gray;
+      text-transform: uppercase;
+    }
+
+    td {
+      margin: 0;
+      text-align: center;
+      padding: 0.5em;
+      vertical-align: middle;
+      border-bottom: 1px solid $gray;
+    }
+
+    &__button {
+      border: none;
+      outline: 0;
+      background-color: $red;
+      color: $white;
+      padding: 0.7em;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $light_red;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .user-list {
+    &__container {
+      width: 50%;
+    }
+  }
+}

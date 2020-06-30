@@ -1,0 +1,27 @@
+@import '../../styles/colors.scss';
+
+.toast-message {
+  padding: 1em;
+  margin: 1em 0;
+  color: $white;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+  background-color: $green;
+  display: flex;
+  justify-content: space-between;
+
+  &__close {
+    border: none;
+    outline: 0;
+    font-size: 18px;
+    font-weight: 900;
+    background-color: transparent;
+    color: $white;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1024px) {
+
+}

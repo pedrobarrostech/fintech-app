@@ -1,0 +1,29 @@
+
+@import '../../styles/colors.scss';
+
+.submit-button {
+  background: $gray;
+  font-size: 19px;
+  border: 0;
+  padding: 0.6em 3.8em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: 'Muli', sans-serif;
+  margin-top: 1em;
+  
+  &.disabled {
+    color: rgba(0,0,0, 0.5);
+    cursor: not-allowed;
+  }
+
+  &__icon {
+    margin-left: 1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .submit-button {
+    font-size: 24px;
+    margin-top: 0;
+  }
+}

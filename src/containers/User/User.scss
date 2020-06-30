@@ -1,0 +1,91 @@
+@import '../../styles/colors.scss';
+
+.user {
+  margin: 2em;
+  &__form {
+    &__title {
+      display: flex;
+      text-transform: uppercase;
+      justify-content: left;
+    }
+
+    &__gender {
+      margin: 1em 0 2em 0; 
+
+      &__radios {
+        display: flex;
+      }
+
+      &__separator {
+        font-size: 38px;
+        font-weight: 900;
+        display: none;
+      }
+
+      &__label {
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-right: 1em;
+        margin-bottom: 1.5em;
+
+        &.error {
+          color: $red;
+        }
+      }
+    }
+
+    &__separator {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .user {
+    display: flex;
+    justify-content: center;
+  
+    &__form {
+      width: 50%;
+
+      &__title {
+        justify-content: center;
+      }
+    
+      &__document {
+        display: flex;
+
+        &__field {
+          width: 33%;
+        }
+      }
+    
+      &__submit {
+        display: flex;
+        justify-content: center;
+      }
+    
+      &__separator, &__gender__separator {
+        font-size: 25px;
+        font-weight: 900;
+        margin: 1.9em 0.12em 0 0.12em;
+        display: inherit;
+      }
+
+      &__gender {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3em 0; 
+
+        &__separator {
+          margin-top: 0.4em;
+        }
+
+        &__label {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

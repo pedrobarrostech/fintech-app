@@ -1,0 +1,63 @@
+
+@import '../../../styles/colors.scss';
+
+.step {
+  &__item {
+    font-size: 16px;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    display: none;
+
+    .active &-number,
+    .visited &-number {
+      background: $black;
+      color: $blue;
+    }
+
+    &.active {
+      display: flex;
+    }
+
+    &.visited {
+      opacity: 0.25 !important // Force it because Spring effects use style tag in element
+    }
+  }
+
+  &__item-number {
+    display: flex;
+    width: 2em;
+    height: 2em;
+    font-size: 17px;
+    border: 3px solid $black;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+  }
+
+  &__item-text { 
+    display: flex;
+    align-items: center;
+  }  
+}
+
+@media (min-width: 1024px) {
+  .step {
+    &__item {
+      width: 25%;
+      display: flex;
+
+      .active &-number,
+      .visited &-number {
+        background: $black;
+        color: $blue;
+      }
+    }
+
+    &__item-text { 
+      display: flex;
+      align-items: center;
+    }  
+  }
+}
