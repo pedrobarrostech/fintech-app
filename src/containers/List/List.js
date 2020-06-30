@@ -1,10 +1,19 @@
 import React, { useEffect } from 'react'
+import { useSpring, animated as a } from 'react-spring'
 import { useSelector, useDispatch } from 'react-redux'
 import { getLoans, deleteLoan } from '../../store/loan/actions'
-
 import './List.scss'
 
 const List = () => {
+  const animation = useSpring({
+    from: {
+      opacity: 0
+    },
+    to: {
+      opacity: 1
+    },
+    delay: 600
+  })
   const loans = useSelector(state => state.loan.loans)
   const dispatch = useDispatch()
 
@@ -17,7 +26,7 @@ const List = () => {
   }
 
   return (
-    <section className="user-list">
+    <a.section style={ animation } className="user-list">
       <div className="user-list__container">
         <h1 className="user-list__title">
           <i className="fas fa-user"></i>  Lista de Pessoas
@@ -49,7 +58,7 @@ const List = () => {
           </tbody>
         </table>
       </div>
-    </section>
+    </a.section>
   )
 }
 

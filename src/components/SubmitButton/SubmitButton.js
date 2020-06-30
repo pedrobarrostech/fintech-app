@@ -11,7 +11,7 @@ const SubmitButton = ({ disabled, label, name, onClick }) => {
         data-testid={ name }
         type='submit'
         onClick={ onClick }
-        className={`submit-button ${disabled && 'disabled'}`}>
+        className={`submit-button ${disabled ? 'disabled' : ''}`}>
         { label }
         <span
           className="submit-button__icon">

@@ -3,7 +3,7 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import Input from './Input'
 
-describe('Input - UI', () => {
+describe('Input - Component', () => {
   it('calls "onBlur" prop on input blur', () => {
     const inputName = 'test'
     const onBlur = jest.fn()

@@ -3,7 +3,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import ToastMessage from './ToastMessage'
 
-describe('Toast Message - UI', () => {
+describe('Toast Message - Component', () => {
   it('List items', () => {
     const message = 'Success'
     const onClick = jest.fn()

@@ -3,7 +3,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import Select from './Select'
 
-describe('Select - UI', () => {
+describe('Select - Component', () => {
   it('List items', () => {
     const inputName = 'emission'
     const register = jest.fn()

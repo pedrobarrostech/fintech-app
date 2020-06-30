@@ -13,17 +13,18 @@ const Menu = () => {
   }
 
   return (
-    <nav className='menu' id='menu'>
+    <nav className='menu' id='menu' data-testid='menu'>
       <div className='menu__button'>
-        <button className='menu__icon' onClick={ () => menuAction() }>
+        <button className='menu__button__icon' onClick={ () => menuAction() }>
           <i className='fa fa-bars'></i>
         </button>
       </div>
       <ul className='menu__items'>
+        <MenuItem label='Dados Pessoais' href='/' />
         <MenuItem label='Lista' href='/list' />
-        <MenuItem label='Como funciona' href='/' />
-        <MenuItem label='Privacidade' href='/' />
-        <MenuItem label='Ajuda' href='/' />
+        <MenuItem label='Como funciona' href='#' />
+        <MenuItem label='Privacidade' href='#' />
+        <MenuItem label='Ajuda' href='#' />
       </ul>
     </nav>
   )

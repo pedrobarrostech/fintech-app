@@ -3,7 +3,7 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import Radio from './Radio'
 
-describe('Radio - UI', () => {
+describe('Radio - Component', () => {
   it('calls "onChange" prop on radio change', () => {
     const inputName = 'gender'
     const onChange = jest.fn()
